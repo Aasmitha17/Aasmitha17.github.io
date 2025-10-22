@@ -1,4 +1,4 @@
-// Select all navigation links
+
 const navLinks = document.querySelectorAll('nav a');
 // Select all sections
 const sections = document.querySelectorAll('section');
@@ -6,6 +6,7 @@ const sections = document.querySelectorAll('section');
 // Function to show only the selected section
 function showSection(id) {
   sections.forEach(section => {
+    // Show only the section that matches the clicked link
     if (section.id === id) {
       section.style.display = 'block';
     } else {
@@ -19,13 +20,10 @@ navLinks.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Get the target section id (e.g., "#about" -> "about")
+    // Get the target section id (remove the "#" from href)
     const targetId = this.getAttribute('href').substring(1);
 
-    // Show the selected section and hide others
+    // Show only the clicked section
     showSection(targetId);
   });
 });
-
-// Initially show only the About section (or whichever you prefer)
-showSection('about');

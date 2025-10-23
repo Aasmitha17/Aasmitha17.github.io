@@ -48,5 +48,19 @@ footer {
   margin-top: 20px;
 }
 
+  i {
+  color: #1a73e8;
+  margin-right: 8px;
+}
+ul li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 
 
